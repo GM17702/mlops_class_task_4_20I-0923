@@ -1,0 +1,18 @@
+.DEFAULT_GOAL := help
+
+.PHONY: help install run clean
+
+help:
+    @echo "Please use 'make install' to install dependencies, 'make run' to run the script, and 'make clean' to clean up."
+
+install:
+    @echo "Installing dependencies..."
+    pip install -r requirements.txt
+
+run:
+    @echo "Running the script..."
+    python train.py
+
+clean:
+    @echo "Cleaning up..."
+    # Add commands to clean up any generated files or directories here
